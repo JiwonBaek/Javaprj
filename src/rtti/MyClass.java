@@ -1,12 +1,14 @@
 package rtti;
 
+
 public class MyClass {
-	public void print() {
+	@Print
+	public void bbb() {
 		System.out.println("Hello");
 	}
-	
-	public void input() {
-		
+	@Print
+	public void aaa() {
+		System.out.println("exam.total()");
 	}
 
 }
