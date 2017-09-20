@@ -5,7 +5,9 @@ public class ExamProgram {
    
 	public static void main(String[] args) {
 		            
+		     
 		      Exam[] exams = new Exam[3];
+		      
 		      
 		      for(int i=0; i<3; i++)
 		         exams[i] = new Exam();
@@ -19,7 +21,7 @@ public class ExamProgram {
 		         
 		         switch(menu) {
 		         case 1:
-		            Exam.input(exams);
+		           Exam.input(exams);
 		            break;
 		         case 2:
 		            Exam.print(exams);
@@ -29,16 +31,17 @@ public class ExamProgram {
 		         }
 		      }
 		   }
-	
-		   public static int inputMenu(int menu)
+
+
+		public static int inputMenu(int menu)
 		   {
 		      // TODO Auto-generated method stub
 			    
 			   
 				System.out.print("┌─────────────────────────────────┐\n");
-				System.out.print("│                                                                                                        │\n");
-				System.out.print("│            메인 메뉴                                                                               │\n");
-				System.out.print("│                                                                                                        │\n");
+				System.out.print("│                                 │\n");
+				System.out.print("│            메인 메뉴            │\n");
+				System.out.print("│                                 │\n");
 				System.out.print("└─────────────────────────────────┘\n");	
 				System.out.println("1. 성적 입력");
 				System.out.println("2. 성적 출력");

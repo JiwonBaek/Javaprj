@@ -1,20 +1,23 @@
-package oop.collec.sizeup;
+package oop.collec.col;
 
 import java.util.Scanner;
 
 public class ExamConsole {// 입출력 담당
 
-	private Exam[] exams;
+	private ExamList exams;
+	
+	/*private Exam[] exams;
 	private int index;
 	private int capacity =3;
-	
+	*/
 	public ExamConsole() {
-		exams = new Exam[3];
+		exams =new ExamList();
+		/*exams = new Exam[3];
 		index = 0;
 		capacity =3;
-
-		for (int i = 0; i < 3; i++)
-			exams[i] = new Exam();
+*/
+		/*for (int i = 0; i < 3; i++)
+			exams[i] = new Exam();*/
 	}
 
 	public void setExam(Exam exam) {
@@ -65,7 +68,7 @@ public class ExamConsole {// 입출력 담당
 		exam.setMath(math);
 
 	
-		
+	/*	
 		if(index>=capacity ) {
 			//1.새로운 배열 생성
 			Exam[] temp= new Exam[capacity+2];
@@ -77,8 +80,9 @@ public class ExamConsole {// 입출력 담당
 			    exams=temp;
 			    //4. 새로운 용량을 표기한다.
 				capacity=capacity+2;
-		}
-		exams[index++] = exam;
+		}*/
+		
+		exams.add(exam);
 	
 		
 	}
@@ -89,9 +93,10 @@ public class ExamConsole {// 입출력 담당
 		System.out.print("│            성적 출력            │\n");
 		System.out.print("└─────────────────────────────────┘\n");
 
-		for (int i = 0; i < index; i++) {
-			Exam exam = exams[i];
-
+		for (int i = 0; i <exams.size(); i++) {
+			//Exam exam = exams[i];
+			Exam exam=exams.get(i);
+			
 			int kor = exam.getKor();
 			int eng = exam.getEng();
 			int math = exam.getMath();
