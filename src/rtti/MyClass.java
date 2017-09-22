@@ -2,11 +2,16 @@ package rtti;
 
 
 public class MyClass {
-	@Print
+	@Print(enable=true)
+	public void hehehe() {
+		System.out.println("jehoho");
+	}
+	
+	@Print(enable=false)
 	public void bbb() {
 		System.out.println("Hello");
 	}
-	@Print
+	@Print(enable=true)
 	public void aaa() {
 		System.out.println("exam.total()");
 	}

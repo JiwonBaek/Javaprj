@@ -9,4 +9,6 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 public @interface Print {
 
+	boolean enable() default true;//어노테이션의 속성 
+
 }
